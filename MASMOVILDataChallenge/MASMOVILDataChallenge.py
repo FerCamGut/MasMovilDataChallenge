@@ -9,7 +9,7 @@ class Persona:
 class Trabajador(Persona):
     """Clase que representa a un Trabajador"""
 
-    def __init__(self, nombre, edad, departamento, puesto):
+    def __init__(self, nombre, edad, departamento='Data', puesto='Analyst'):
         """Constructor de clase Trabajador"""
 
         # Invoca al constructor de clase Persona
@@ -32,4 +32,9 @@ nombre2='Fernando'
 trabajador_1 = Trabajador(nombre2,35,'BigData','DataAnalyst')
 trabajador_1.presentation()
 
+nombre3='Rosa'
+trabajador_X = Trabajador(nombre3,40)
+trabajador_X.presentation()
+
 #self.nombre hace referencia al atributo de la misma clase; mientras que nombre es una variable global
+
