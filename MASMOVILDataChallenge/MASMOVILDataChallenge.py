@@ -31,3 +31,5 @@ persona_1.presentation()
 nombre2='Fernando'
 trabajador_1 = Trabajador(nombre2,35,'BigData','DataAnalyst')
 trabajador_1.presentation()
+
+#self.nombre hace referencia al atributo de la misma clase; mientras que nombre es una variable global
