@@ -38,3 +38,8 @@ trabajador_X.presentation()
 
 #self.nombre hace referencia al atributo de la misma clase; mientras que nombre es una variable global
 
+my_var_list = [ 'Andrea', '42', 'Ventas', 'Manager']
+
+trabajador_2 = Trabajador(*my_var_list)
+trabajador_2.presentation()
+
