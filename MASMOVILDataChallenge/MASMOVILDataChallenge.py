@@ -1,7 +1,8 @@
-
 from airflow import DAG
 from datetime import datetime, timedelta
 from airflow.operators.dummy_operator import DummyOperator
+from timediff_operator import TimeDiffOperator
+
 
 
 default_args = {
@@ -28,9 +29,11 @@ with DAG(dag_id='test',default_args=default_args, schedule_interval="0 3 * * *")
 		task_n.append(t) 
 		if i>0 and i % 2 == 0:
 			task_n[1::2]>>t
-	task_n[1::2]>>task_n[0]
+	
+	task_n[1::2]>> task_n[0]
 	start>>end
-		 
-
 	
 	
+with dag:	
+	diffTimeTask = TimeDiffOperator(task_id='diffTimeTask',input_date=datetime(2012, 3, 5, 23, 8, 15))
+	diffTimeTask
