@@ -28,7 +28,7 @@ with DAG(dag_id='test',default_args=default_args, schedule_interval="0 3 * * *")
 		task_n.append(t) 
 		if i>0 and i % 2 == 0:
 			task_n[1::2]>>t
-	
+	task_n[1::2]>>task_n[0]
 	start>>end
 		 
 
