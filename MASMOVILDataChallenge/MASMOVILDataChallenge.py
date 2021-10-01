@@ -37,3 +37,6 @@ with DAG(dag_id='test',default_args=default_args, schedule_interval="0 3 * * *")
 with dag:	
 	diffTimeTask = TimeDiffOperator(task_id='diffTimeTask',input_date=datetime(2012, 3, 5, 23, 8, 15))
 	diffTimeTask
+
+#Airflow también proporciona interfaces de comunicación llamadas Hooks para conectar con otras plataformas y bases de datos externas como pueden ser HDFS o Apache Hive.
+#Las conexiones se usan para obtener la informacion de autenticacion
